@@ -1,0 +1,112 @@
+<div class="main_content">
+    <div class="container">
+        <div class="header-center">
+            <h1>Employment </h1>
+        </div>
+        <!-- white bg -->
+        <div class="white_bg">
+            <h3 class="text-center">Your Profession</h3>
+            <div class="form-box">
+                <form>
+                    <span [hidden]="!isEmployment">
+                        <div class="custom-label">
+                            <div class="input-file">
+    
+                                <input type="file" name="file" id="file" class="file">
+                                <div class="d-flex">
+                                    <input type="text" name="file-name" id="file-name" class="file-name"
+                                        readonly="readonly">
+                                    <input type="button" class="filebtn" value="Upload Resume">
+                                </div>
+    
+                                <div class="info-tag"><a href="#" title="info"><i class="fa fa-info-circle"></i></a></div>
+                            </div>
+                            <h5 class="text-right">or copy paste your resume here</h5>
+                        </div>
+                        <h4>Your Education</h4>
+                        <div class="form-label-group custom-label">
+    
+                            <select class="form-control">
+                                <option>Highest Qualification</option>
+                            </select>
+    
+                        </div>
+                        <div class="form-label-group custom-label">
+    
+                            <select class="form-control">
+                                <option>Course</option>
+                            </select>
+    
+                        </div>
+                        <div class="form-label-group custom-label">
+    
+                            <input type="text" id="inputUni" class="form-control" placeholder="University / college"
+                                required="" autofocus="">
+                            <label for="inputUni">University / college</label>
+                        </div>
+                        <div class="form-label-group custom-label">
+    
+                            <select class="form-control">
+                                <option>Course Type</option>
+                            </select>
+    
+                        </div>
+                        <div class="form-label-group custom-label">
+    
+                            <input type="text" id="inputPassing" class="form-control" placeholder="Passing Year" required=""
+                                autofocus="">
+                            <label for="inputPassing">Passing Year</label>
+                        </div>
+                        <div class="form-label-group custom-label">
+                            <span class="eye-box"><i class="fa fa-plus"></i></span>
+                            <input type="text" id="inputSpecial" class="form-control" placeholder="Specialization"
+                                required="" autofocus="">
+                            <label for="inputSpecial">Specialization</label>
+                        </div>
+                    </span>
+                    <span [hidden]="isEmployment">
+                        <div class="form-label-group custom-label">
+    
+                            <input type="text" id="currentDesignation" class="form-control" placeholder="Current Designation"
+                                required="" autofocus="">
+                            <label for="currentDesignation">Current Designation</label>
+                        </div>
+                       
+                        <div class="form-label-group custom-label">
+    
+                            <input type="text" id="currentCompany" class="form-control" placeholder="Current Company" required=""
+                                autofocus="">
+                            <label for="currentCompany">Current Company</label>
+                        </div>
+                        <div class="form-label-group custom-label">
+                            <input type="text" id="annualSalary" class="form-control" placeholder="Annual Salary ($)"
+                                required="" autofocus="">
+                            <label for="annualSalary">Annual Salary ($)</label>
+                        </div>
+                        <div class="form-label-group custom-label">
+                            <input type="text" id="currentLocation" class="form-control" placeholder="Current Location" required=""
+                                autofocus="">
+                            <label for="currentLocation">Current Location</label>
+                        </div>
+                        <div class="form-label-group custom-label">
+                            <span class="eye-box"><i class="fa fa-plus"></i></span>
+                            <input type="text" id="skills" class="form-control" placeholder="Skills"
+                                required="" autofocus="">
+                            <label for="skills">Skills</label>
+                        </div>
+                        <div class="form-label-group custom-label">
+                            <input type="text" id="Industry" class="form-control" placeholder="Industry" required=""
+                                autofocus="">
+                            <label for="Industry">Industry</label>
+                        </div>
+                    </span>
+                    <div class="btn-box two-btn">
+                        <button class="btn border-btn" (click)="goSecondStep()"> Skip </button>
+                        <button class="btn black-bg" (click)="goSecondStep()"> Continue </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- white bg -->
+    </div>
+</div>
