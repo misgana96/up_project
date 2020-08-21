@@ -7,7 +7,7 @@ import { EmploymentComponent } from './auth/employment/employment.component';
 
 
 const routes: Routes = [
-  { path:"", component:MainComponent },
+  { path:"", component:SigninComponent },
   { path:"register", component: RegisterComponent},
   { path:"signin", component: SigninComponent},
   { path:"employment", component: EmploymentComponent},
