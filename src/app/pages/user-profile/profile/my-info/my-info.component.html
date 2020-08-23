@@ -1,9 +1,9 @@
 <div class="user-info">
 
     <div class="user-img pt-4">
-        <img class="rounded-circle img-fluid" src="../../../assets/images/user_img.png" width="120">
+        <img class="rounded-circle" [src]="imageUrl" width="120" height="120">
         <div class="btn-box mt-3">
-            <button class="btn black-bg">Upload image</button>
+            <button class="btn black-bg" (click)="uploader.click()">Upload image</button>
         </div>    
     </div>
 
@@ -89,3 +89,4 @@
     </form>
 
 </div>
+<input hidden type="file" #uploader (change)="uploadFile($event)"/>

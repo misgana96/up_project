@@ -49,6 +49,13 @@
             color: #FFFFFF;
         }
     }
+    .custom-label {
+        .form-control {
+            &:focus {
+                border: 1px solid #ced4da;
+            }
+        }
+    }
 }
 @media only screen and (max-width: 576px) {
     .user-info {
