@@ -1,0 +1,30 @@
+<div class="row m-0">
+    <div class="col-lg-10 offset-lg-1">
+        <ng-container *ngIf="!isMobile">
+            <div class="row profile-wrapper pt-4 pb-4 pt-sm-0 pb-sm-0 mt-sm-5 mb-sm-5">
+            
+                <div class="sidenav-wrapper col-md-3 pr-0 pl-0">
+                    <app-sidenav></app-sidenav>
+                </div>
+                <div class="user-profile col-md-9">
+                    <router-outlet></router-outlet>
+                </div>
+            </div>    
+        </ng-container>
+
+        <ng-container *ngIf="isMobile">
+            <div class="row mobile-profile-wrapper">
+                <div *ngIf="!navSelected" class="first-view">
+                    <div class="profile-find-job"></div>  
+                    <div class="profile-image"></div>
+                    <div class="sidenav-wrapper-mobile col-8 pr-0 pl-0 pb-5">  
+                        <app-sidenav (navSelected)="selectedNav($event)"></app-sidenav>
+                    </div>
+                </div>    
+                <div *ngIf="navSelected" class="user-profile">
+                    <router-outlet></router-outlet>
+                </div>
+            </div>    
+        </ng-container>
+    </div>    
+</div>

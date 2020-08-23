@@ -1,12 +1,12 @@
 <header>
-    <div class="container">
+    <div class="pl-xl-0 pr-xl-0 container">
 
         <nav class="navbar navbar-expand-lg ">
             <a class="navbar-brand" href="#">
                 <img src="assets/images/logo.jpg" alt="THAZBAZ">
             </a>
 
-            <form class="form-inline search-box my-2 my-lg-0">
+            <form class="form-inline ml-xl-2 search-box my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search Job Title or Company"
                     aria-label="Search">
                 <input class="form-control custom-width" type="search" placeholder="Search City,State"
@@ -39,13 +39,30 @@
                 </ul>
 
             </div>
-            <ul class="login-right">
+            <!-- <ul class="login-right">
                 <li routerLinkActive="active">
                     <a routerLink="/signin"  >Sign in</a>
                 </li>
 
                 <li routerLinkActive="active">
                     <a routerLink="/register" class="active">Register</a>
+                </li>
+            </ul> -->
+            <ul class="login-right">
+                <li routerLinkActive="active">
+                    <a routerLink="/profile">
+                        <img src="../../../assets/images/chat.png">
+                    </a>
+                </li>
+                <li routerLinkActive="active">
+                    <a routerLink="/profile/notification">
+                        <img src="../../../assets/images/notification.png">
+                    </a>
+                </li>
+                <li routerLinkActive="active">
+                    <a routerLink="/profile/my-info">
+                        <img src="../../../assets/images/user.png"> My Profile
+                    </a>
                 </li>
             </ul>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"

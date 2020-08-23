@@ -1,0 +1,29 @@
+<div class="sidenav">
+    <div class="sidenav-header">
+        <div class="cross-icon text-right">
+            <img src="../../../../assets/images/cross.png">
+        </div>
+        <div class="user-icons d-flex justify-content-between">
+            <div>
+                <img src="../../../../assets/images/chat2.png">
+            </div>
+            <div>
+                <img src="../../../../assets/images/notification2.png">
+            </div>
+            <div>
+                <img src="../../../../assets/images/user2.png">
+            </div>    
+        </div>
+    </div>  
+    <div class="user-img text-center pt-4 pb-4">
+        <img class="rounded-circle img-fluid" src="../../../../assets/images/user_img.png" width="100">
+        <div class="user-name mt-2">Jone Leo</div>
+    </div>
+    <ul class="nav-items-list mb-0 pb-2">
+        <li *ngFor="let nav of sideNavItems; let i = index;" class="d-flex" [routerLink]="nav.path" routerLinkActive="active" (click)="navigation(nav)">
+            <div>{{nav.label}}</div>
+            <div class="icon icon-active ml-auto"><img src="../../../../assets/images/next.png"></div>
+            <div class="icon icon-down ml-auto"><img src="../../../../assets/images/nextdown.png"></div>
+        </li>
+    </ul>
+</div>    
