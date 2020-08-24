@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { ProfileService } from '../profile.service';
 
 @Component({
   selector: 'app-sidenav',
@@ -15,11 +16,15 @@ export class SidenavComponent implements OnInit {
     { label: "Settings", path: '/profile/settings' },
   ]
 
+  public image;
   @Output() navSelected: EventEmitter<any> = new EventEmitter();
-
-  constructor() { }
+  
+  constructor(private profile:ProfileService) { }
 
   ngOnInit(): void {
+    this.profile.profileImg.subscribe(data => {
+      this.image = data;
+    })
   }
 
   navigation(navItem) {
