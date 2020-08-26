@@ -1,0 +1,162 @@
+@import '../../../styles/mixin';
+
+.page-wrapper{
+    margin: 30px 10px;
+}
+
+.section-title{
+    margin-bottom: 10px;
+}
+
+.section-title h3{
+    color: $black-color;
+    font-size: 20px;
+}
+
+.custom-card{
+    border-radius: 13px;
+    border: 1px solid $grey-color;
+    width: 100%!important;
+}
+
+.card-block-top{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.card-block-top h3{
+    font-size: 20px;
+    font-weight: 400;
+    color: $black-color;
+}
+
+.color-blue{
+    color: #34A0D3;
+}
+
+.color-green{
+    color: #00CB2D;
+}
+
+.color-darkBlue{
+    color: #547FF3;
+}
+
+.color-purple{
+    color: #7B17FB;
+}
+
+.card-block-top p{
+    font-size: 14px;
+    color: $black-color;
+    color: $dark-grey;
+}
+
+.card-block-bottom{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.card-block-bottom h4{
+    font-size: 48px;
+    font-weight: 500;
+}
+
+.card-block-bottom small{
+    font-size: 14px
+}
+
+.latestJobs-Title{
+    background-color: $grey-color;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px 0px;
+}
+
+.latestJobs-Title h4{
+    font-size: 22px;
+    color: #000000;
+}
+
+.card-one h3,
+.card-two h3,
+.card-three h3,
+.card-four h3{
+    color: $black-color;
+    font-size: 24px;
+}
+
+.card-one h3,
+.card-four h3{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.card-one p{
+    text-align: center;
+    color: $dark-grey;
+    font-size: 18px;
+    width: 80%;
+    margin: 0 auto;
+    line-height: 24px;
+}
+
+.legend{
+    display: flex;
+    justify-content: center;
+}
+
+.legend ul li{
+    font-size: 14px;
+    color: $black-color;
+    line-height: 35px;
+}
+
+.legend ul li span{
+    color: $dark-grey;
+}
+
+.legend ul li .basic-color,
+.legend ul li .silver-color,
+.legend ul li .gold-color{
+    position: relative;
+}
+
+.legend ul li .basic-color:before,
+.legend ul li .silver-color:before,
+.legend ul li .gold-color:before{
+    position: absolute;
+    left: -20px;
+    top: 2px;
+    content: "";
+    width: 13px;
+    height: 13px;
+}
+
+.legend ul li .basic-color:before{
+    background-color: #34A0D3;
+}
+
+.legend ul li .silver-color:before{
+    background-color: #872BFB;
+}
+
+.legend ul li .gold-color:before{
+    background-color: #4ED895;
+}
+
+#visitors .card-body table tr th:last-child,
+#visitors .card-body table tbody tr td:last-child{
+    text-align: right;
+}
+
+#visitors .card-body table tbody tr td:first-child{
+    color: $black-color;
+    font-weight: 400;
+}
+
+#visitors .card-body table tbody tr td{
+    line-height: 11px;
+}

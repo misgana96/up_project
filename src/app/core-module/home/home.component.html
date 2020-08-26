@@ -1,0 +1,193 @@
+<div class="page-wrapper">
+    <div class="container-fluid">
+        <div class="section-title">
+            <h3>Analytics</h3>
+        </div>
+        <div class="row mb-5">
+            <div class="col-xl-3 col-md-6 col-sm-12">
+                <div class="card mb-3 custom-card">
+                    <div class="card-body">
+                        <div class="card-block-top">
+                            <h3>Total User</h3>
+                            <p><i class="fa fa-arrow-down mr-3" aria-hidden="true"></i>
+                                -5000 users</p>
+                        </div>
+                        <div class="card-block-bottom">
+                            <h4 class="color-blue">2050000</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6 col-sm-12">
+                <div class="card mb-3 custom-card">
+                    <div class="card-body">
+                        <div class="card-block-top">
+                            <h3>Online User</h3>
+                            <p><i class="fa fa-arrow-up mr-3" aria-hidden="true"></i>+10000 users</p>
+                        </div>
+                        <div class="card-block-bottom">
+                            <h4 class="color-green">50000</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6 col-sm-12">
+                <div class="card mb-3 custom-card">
+                    <div class="card-body">
+                        <div class="card-block-top">
+                            <h3>Income</h3>
+                            <p><i class="fa fa-arrow-down mr-3" aria-hidden="true"></i>
+                                -$5000 dollars</p>
+                        </div>
+                        <div class="card-block-bottom">
+                            <h4 class="color-darkBlue">$5200</h4><small class="color-darkBlue">/Month</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6 col-sm-12">
+                <div class="card mb-3 custom-card">
+                    <div class="card-body">
+                        <div class="card-block-top">
+                            <h3>Apply Job</h3>
+                            <p><i class="fa fa-arrow-up mr-3" aria-hidden="true"></i>+500 Apply</p>
+                        </div>
+                        <div class="card-block-bottom">
+                            <h4 class="color-purple">50000</h4><small class="color-purple">/Today</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section-title">
+            <h3>Report</h3>
+        </div>
+        <div class="row  mb-5">
+            <div class="col-xl-4 col-lg-6 col-md-6 d-flex align-items-stretch">
+                <div class="card mb-3 custom-card card-one">
+                    <div class="card-body">
+                        <h3>Subscription Plan</h3>
+                        <p>Subscription plans that people prefer Its this chart</p>
+
+                        <canvas class="my-5" width="100%" id="subscriptionPlanChart"></canvas>
+
+                        <div class="legend">
+                            <ul>
+                                <li>
+                                    <span class="basic-color"></span> Basic Plan <span>23052 User</span>
+                                </li>
+                                <li>
+                                    <span class="silver-color"></span> Silver Plan <span>236052 User</span>
+                                </li>
+                                <li>
+                                    <span class="gold-color"></span> Gold Plan <span>2052 User</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-md-6">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card mb-3 custom-card card-two">
+                            <div class="card-body">
+                                <h3>Subscription User</h3>
+                                <canvas class="my-5" id="subscriptionUserChart"></canvas>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="card mb-3 custom-card card-three">
+                            <div class="card-body">
+                                <h3>User Average Time</h3>
+                                <div id="chartdiv" style="width: 100%; height: 200px;"></div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-l-6 col-md-6 d-flex align-items-stretch">
+                <div class="card custom-card card-four" id="visitors">
+                    <div class="card-body">
+                        <h3>Website Visitors</h3>
+                        <div id="mapdiv" style="width: 100%; height: 240px;"></div>
+                        <h4 class="text-center">Last 28 Days</h4>
+                        <table class="table table-borderless">
+                            <thead>
+                                <tr>
+                                    <th>Country</th>
+                                    <th>Visitor</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>USA</td>
+                                    <td>23000</td>
+                                </tr>
+                                <tr>
+                                    <td>Brazil</td>
+                                    <td>22000</td>
+                                </tr>
+                                <tr>
+                                    <td>Russia</td>
+                                    <td>20000</td>
+                                </tr>
+                                <tr>
+                                    <td>United Kingdom</td>
+                                    <td>10000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h5 class="text-center c-pointer">View more</h5>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="latestJobs-Title">
+                    <h4>Latest Jobs Apply</h4>
+                </div>
+                <div class="card-body">
+                    <div class="table-wrap">
+                        <div class="table-responsive dataTables_wrapper">
+                            <table class="table dataTable" datatable [dtOptions]="dtOptions">
+                                <thead>
+                                    <tr role="row">
+                                        <th>Job ID</th>
+                                        <th>User Name</th>
+                                        <th>Job Title</th>
+                                        <th>Company</th>
+                                        <th>Education</th>
+                                        <th>Experience</th>
+                                        <th>Chat</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let item of data">
+                                        <td>{{item.jobID}}</td>
+                                        <td>{{item.userName}}</td>
+                                        <td>{{item.jobTitle}}</td>
+                                        <td>{{item.company}}</td>
+                                        <td>{{item.education}}</td>
+                                        <td>{{item.experience}}</td>
+                                        <td style="color:#FBAE17 ;"><i class="fa fa-commenting-o"
+                                                aria-hidden="true"></i>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

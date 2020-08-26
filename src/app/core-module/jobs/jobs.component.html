@@ -1,0 +1,288 @@
+<div class="page-wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="heading desktop-hide">
+                    <div class="title">
+                        <h3>Latest created Jobs <small>(5002 Jobs)</small></h3>
+                    </div>
+                </div>
+                <div class="heading mobile-heading-background">
+                    <div class="filter-button">
+                        <span class="d-flex c-pointer-a" (click)="showFilter()">
+                            <i class="fa fa-sliders fa-3x mr-3" aria-hidden="true"></i>
+                            <h3>Filter</h3>
+                        </span>
+
+                        <div class="filterBox-Wrapper" id="filterBox-Wrapper">
+                            <div class="filterBox-section">
+                                <div class="filter-title">
+                                    <h3>Filter</h3>
+                                    <i class="fa fa-times fa-3x c-pointer-a" (click)="closeFilter()"
+                                        aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div class="filterBox-section salary-section">
+                                <div class="filter-title c-pointer" (click)="hideSalaryRange()">
+                                    <h4>Salary</h4>
+                                    <i class="fa fa-angle-up fa-3x c-pointer-a" id="fa-angle-up-salary"
+                                        aria-hidden="true"></i>
+                                </div>
+                                <div id="salaryRange">
+                                    <div class="custom-slider">
+                                        <ng5-slider [(value)]="minValue" [(highValue)]="maxValue" [options]="options">
+                                        </ng5-slider>
+                                    </div>
+                                    <div class="filter-values">
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">$</span>
+                                            </div>
+                                            <input type="text" class="form-control" [(ngModel)]="minValue">
+                                        </div>
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">$</span>
+                                            </div>
+                                            <input type="text" class="form-control" [(ngModel)]="maxValue">
+                                        </div>
+                                        <!-- <p><input type="number" class="form-control" [(ngModel)]="minValue"></p> -->
+                                        <!-- <p><input type="number" class="form-control" [(ngModel)]="maxValue"></p> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="filterBox-section industries-section">
+                                <div class="filter-title c-pointer" (click)="hideJobIndustries()">
+                                    <h4>Industries</h4>
+                                    <i class="fa fa-angle-up fa-3x c-pointer-a" id="fa-angle-up-industries"
+                                        aria-hidden="true"></i>
+                                </div>
+                                <ul id="industriesTypeList">
+                                    <li>
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                                <input type="checkbox" class="form-check-input" value=""><span>IT
+                                                    And
+                                                    Development</span>
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                                <input type="checkbox" class="form-check-input"
+                                                    value=""><span>Contraction</span>
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                                <input type="checkbox" class="form-check-input"
+                                                    value=""><span>Education</span>
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                                <input type="checkbox" class="form-check-input" value=""><span>Sales
+                                                    and
+                                                    Marketing</span>
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <h4 class="c-pointer"><b>Other</b></h4>
+                                    </li>
+                                </ul>
+
+                            </div>
+                            <div class="filterBox-section jobType-section">
+                                <div class="filter-title c-pointer" (click)="hideJobTypes()">
+                                    <h4>Job Type</h4>
+                                    <i class="fa fa-angle-up fa-3x c-pointer-a" id="fa-angle-up-job"
+                                        aria-hidden="true"></i>
+                                </div>
+                                <ul id="jobTypeList">
+                                    <li>
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                                <input type="checkbox" class="form-check-input" value=""><span>Work
+                                                    From Home</span>
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                                <input type="checkbox" class="form-check-input" value=""><span>Full
+                                                    Time</span>
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                                <input type="checkbox" class="form-check-input" value=""><span>Part
+                                                    Time</span>
+                                            </label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="title mobile-hide">
+                        <h3>Latest created Jobs <small>(5002 Jobs)</small></h3>
+                    </div>
+                    <div class="createJob-button">
+                        <button class="btn createJobBtn" (click)="showForm()">
+                            Create New Job <span class="createJObBtn-icon"><i class="fa fa-plus ml-2"
+                                    aria-hidden="true"></i></span>
+
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card-body">
+                    <div class="table-wrap">
+                        <div class="table-responsive dataTables_wrapper">
+                            <table class="table dataTable" datatable [dtOptions]="dtOptions">
+                                <thead>
+                                    <tr role="row">
+                                        <th>Job ID</th>
+                                        <th>Company</th>
+                                        <th>Job Title</th>
+                                        <th>Industry</th>
+                                        <th>Time</th>
+                                        <th>See Job</th>
+                                        <th>Chat</th>
+                                        <th>Apply</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let item of data">
+                                        <td>{{item.jobID}}</td>
+                                        <td>{{item.company}}</td>
+                                        <td>{{item.jobTitle}}</td>
+                                        <td>{{item.industry}}</td>
+                                        <td>{{item.time}}</td>
+                                        <td>{{item.seeJob}}<small>people</small></td>
+                                        <td>{{item.chat}}</td>
+                                        <td>{{item.apply}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="createJob-wrapper" id="createJob-wrapper">
+        <div class="form-title">
+            <h3>Create New Job</h3>
+            <div class="close c-pointer-a" (click)="closeForm()"><i class="fa fa-times fa-2x" aria-hidden="true"></i>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-6">
+                <div class="form-wrapper">
+                    <form>
+                        <div class="section-title">
+                            <h4>Company Detail</h4>
+                            <div class="dash-line"></div>
+                        </div>
+                        <div class="row field-wrapper">
+                            <div class="col-xl-8">
+                                <div class="form-group">
+                                    <label for="name">Company Name</label>
+                                    <input type="text" id="name" class="form-control" placeholder="Enter Company Name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="type">Industry Type</label>
+                                    <input type="text" id="type" class="form-control" placeholder="Enter Industry Type">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="section-title">
+                            <h4>Job Detail</h4>
+                            <div class="dash-line"></div>
+                        </div>
+                        <div class="row field-wrapper">
+                            <div class="col-xl-12">
+                                <div class="form-group">
+                                    <label for="jobTitle">Job Title</label>
+                                    <input type="text" id="jobTitle" class="form-control" placeholder="Enter Job Title">
+                                </div>
+                            </div>
+                            <div class="col-xl-12">
+                                <div class="form-group">
+                                    <label for="jobDesc">Job Description</label>
+                                    <textarea class="form-control" rows="5" id="comment"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-xl-4">
+                                <div class="form-group">
+                                    <label for="jobSalary">Job Salary</label>
+                                    <input type="text" id="jobSalary" class="form-control" placeholder="Enter Salary">
+                                </div>
+                            </div>
+                            <div class="col-xl-4">
+                                <div class="form-group">
+                                    <label for="jobSalary">Job Type</label>
+                                    <select id="jobSalary" class="form-control">
+                                        <option value="0" selected disabled>Choose...</option>
+                                        <option value="1">Type 1</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-xl-12">
+                                <label for="address">Address</label>
+                                <input type="text" class="form-control" id="address" placeholder="Enter Address">
+                            </div>
+                        </div>
+
+                        <div class="section-title">
+                            <h4>Requirement*</h4>
+                            <div class="dash-line"></div>
+                        </div>
+                        <div class="row field-wrapper">
+                            <div class="col-xl-8">
+                                <label for="education">Education</label>
+                                <select id="education" class="form-control">
+                                    <option value="0" selected disabled>Choose...</option>
+                                    <option value="1">Masters</option>
+                                </select>
+                            </div>
+                            <div class="col-xl-4">
+                                <label for="experience">Experience</label>
+                                <input type="text" id="experience" class="form-control" placeholder="Years,Month">
+                            </div>
+                            <div class="col-xl-12">
+                                <label for="otherSkills">Other Skill Requirement</label>
+                                <input type="text" class="form-control" id="otherSkills"
+                                    placeholder="Add Skill Required">
+                            </div>
+                        </div>
+                        <button class="btn cancelBtn mr-3">
+                            Cancel
+                        </button>
+                        <button class="btn createJobBtn">
+                            Create Job
+                        </button>
+                    </form>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
