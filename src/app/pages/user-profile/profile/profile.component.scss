@@ -1,0 +1,44 @@
+.profile-wrapper{
+    background-color: #FFFFFF;
+    border: 2px solid #D3D3D3;
+    box-sizing: border-box;
+    border-radius: 20px;
+    font-size: 19px;
+    line-height: 23px;
+    color: #000;
+    .sidenav-wrapper {
+        border-right: 1px solid #C4C4C4;
+        height: auto;
+    }
+}
+
+//profile mobile
+@media only screen and (max-width: 767px) {
+    .first-view {
+        width:100%;
+        position: relative;
+        .profile-find-job {
+            background: url("../../../../assets/images/top_image.png");
+            height: 65vh;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .profile-image {
+            background: url("../../../../assets/images/bottom_Image.png");
+            height: 30vh;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 15px 15px 0 15px;
+        }
+        .sidenav-wrapper-mobile {
+            position: absolute;
+            top:0;
+            right:0;
+            background-color: #FFFFFF;
+            box-shadow: -4px 4px 30px rgba(0, 0, 0, 0.2);
+            border-radius: 10px 0px 10px 10px;
+        }
+    }
+}

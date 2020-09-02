@@ -1,0 +1,95 @@
+.footer {
+    background-color: #1E1E1E;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-size: 16px;
+    line-height: 19px;
+    .footer-links {
+        .footer-link {
+            margin-right: 10px;
+            a {
+                color: #ffffff;
+                text-decoration: none;
+                &:hover {
+                    color: #FBAE17;
+                }
+            }
+        }
+    }
+    .blocks {
+        .heading {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 30px;
+            color: #FFFFFF;
+        }
+        .simple-heading {
+            color: #d4cfcf;
+        }
+        .information-links {
+            display: block;
+            padding-left: 0;
+            margin-bottom: 0;
+            a {
+                color: #d4cfcf;
+                text-decoration: none;
+                &:hover {
+                    color: #FBAE17;
+                }
+            }
+        }
+    }
+    .sepration {
+        border-bottom: 1px solid #FFFFFF;
+        margin-top:32px;
+        margin-bottom: 32px;     
+    }
+    .bottom-text {
+        color: #FFFFFF;
+        font-weight: 500;
+        position: relative;
+        a {
+            font-size: 14px;
+            line-height: 16px;
+            color: #FFFFFF;
+            text-decoration: none;
+        }
+        .privacy-terms-link {
+            position: absolute;
+            top: 2px;
+            right: 0;
+        }
+    }
+}
+@media only screen and (max-width: 767px)  {
+    .navbar-brand {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 12px;
+        img {
+            width:140px;
+            height: 40px;
+        }
+    }
+    .footer-links {
+        padding-left: 0;
+        margin-bottom: 32px;
+        flex-flow: wrap;
+    }
+    .blocks {
+        margin-bottom: 32px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    .bottom-text {
+        font-size: 12px;
+        line-height: 14px;
+        .privacy-terms-link {
+            position: relative!important;
+            text-align: center;
+            margin-top: 16px;
+        }
+    }
+}

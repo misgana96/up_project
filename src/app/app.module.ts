@@ -8,6 +8,8 @@ import { RegisterComponent } from './auth/register/register.component';
 import { SigninComponent } from './auth/signin/signin.component';
 import { MainComponent } from './auth/main/main.component';
 import { EmploymentComponent } from './auth/employment/employment.component';
+import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.component';
+import { FooterComponent } from './layout/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { EmploymentComponent } from './auth/employment/employment.component';
     RegisterComponent,
     SigninComponent,
     MainComponent,
-    EmploymentComponent
+    EmploymentComponent,
+    PrivacyPolicyComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
