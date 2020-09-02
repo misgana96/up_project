@@ -31,10 +31,10 @@ padding: 0;
 	border-radius:9px;
 }
 .search-box input.custom-width.form-control {
-    max-width: 165px;
+    max-width: 160px;
 }
 .search-box input.mr-sm-2.form-control{
-	width: 240px;
+	width: 230px;
 }
 .search-box .btn-search{
 background:#fff;
@@ -453,14 +453,4 @@ color: #808080;
     
     border-width: 1px;
 }
-.active{
-	color: #fbad17;
-}
 
-.filebtn {
-	display: inline;
-}
-
-.upload-box {
-   display: none !important;
-}
