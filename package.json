@@ -21,6 +21,7 @@
     "@angular/router": "~9.1.12",
     "bootstrap": "^4.5.2",
     "jquery": "^3.5.1",
+    "ngx-owl-carousel": "^2.0.7",
     "owl.carousel": "^2.3.4",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",

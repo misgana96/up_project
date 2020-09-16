@@ -230,6 +230,27 @@ footer{
 .right-footer a{
     padding:0 10px;
 }
+
+.home-slider .owl-dots button span {
+    margin: 0 0px;
+}
+.our-partners .owl-nav button.owl-prev, .arrival-slider .owl-nav button.owl-prev {
+    left: 0;
+}
+.our-partners .owl-nav button.owl-next, .arrival-slider .owl-nav button.owl-next {
+    right: 0;
+}
+.custom-padding {
+    padding: 0 0px;
+}
+.gray-box.white-box li {
+    display: block;
+    width: 100%;
+    margin: 0 -2px;
+}
+.gray-box.white-box li:before{
+    display: none;
+}
 }
 
 
@@ -241,7 +262,7 @@ footer{
     .social-btn ul li{
         width: 48%; margin: 0; padding: 0 5px;
     }
-}
+
 
 .social-btn ul li a img{
 	width: 100%;
@@ -270,10 +291,9 @@ footer{
 .banner-caption {
     max-width: 100%;
     right: 14%;
-}
-.owl-dots {
-    position: static; margin-top: 10px;}
-    .how-img {
+} 
+.owl-dots { position: static; margin-top: 10px;}
+.how-img {
     padding: 0;
 }
 .how-it-works {
@@ -288,4 +308,6 @@ footer{
 }
 .out-partner li {
     width: 30%;
+}
+
 }
